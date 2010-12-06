@@ -1,0 +1,13 @@
+<p>
+  <b>Firstname:</b>
+  <%=h @player.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%=h @player.lastname %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

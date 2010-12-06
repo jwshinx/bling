@@ -1,0 +1,31 @@
+<h1>Editing endorsement</h1>
+
+<% form_for(@endorsement) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%=h @endorsement.player.firstname %>
+    <%=h @endorsement.player.lastname %>
+  </p>
+  <p>
+    <%= f.label :beverage %><br />
+    <%= f.select :beverage, @beverages, :selected => @endorsement.endorseable_id %>
+  </p>
+  <p>
+    <%= f.label :endorsement_type %><br />
+    <%= f.text_field :endorsement_type %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :cancellation_year %><br />
+    <%= f.text_field :cancellation_year %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @endorsement %> |
+<%= link_to 'Back', endorsements_path %>

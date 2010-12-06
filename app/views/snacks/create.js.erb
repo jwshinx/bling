@@ -1,0 +1,4 @@
+$("#flash-div").replaceWith('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$("#snacks_count").html("<%= pluralize(@snacks.count, 'Brand') %>");
+$("#snacks").append("<%= escape_javascript(render(:partial => @snack)) %>");
+$("#new_snack")[0].reset();

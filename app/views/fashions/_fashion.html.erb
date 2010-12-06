@@ -1,0 +1,6 @@
+<div id="fash-name-div"><%=h fashion.name %></div>
+<div id="new-fash-links">
+  <%= link_to 'Show', fashion %>
+  <%= link_to 'Edit', edit_fashion_path(fashion) %>
+  <%= link_to 'Destroy', fashion, :confirm => 'Are you sure?', :method => :delete %>
+</div>

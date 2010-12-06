@@ -1,0 +1,20 @@
+<h1>Listing snacks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @snacks.each do |snack| %>
+  <tr>
+    <td><%=h snack.name %></td>
+    <td><%= link_to 'Show', snack %></td>
+    <td><%= link_to 'Edit', edit_snack_path(snack) %></td>
+    <td><%= link_to 'Destroy', snack, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New snack', new_snack_path %>

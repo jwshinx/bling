@@ -1,0 +1,20 @@
+<h1>Listing beverages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @beverages.each do |beverage| %>
+  <tr>
+    <td><%=h beverage.name %></td>
+    <td><%= link_to 'Show', beverage %></td>
+    <td><%= link_to 'Edit', edit_beverage_path(beverage) %></td>
+    <td><%= link_to 'Destroy', beverage, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New beverage', new_beverage_path %>

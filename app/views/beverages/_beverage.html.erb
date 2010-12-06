@@ -1,0 +1,6 @@
+<div id="beve-name-div"><%=h beverage.name %></div>
+<div id="new-beve-links">
+  <%= link_to 'Show', beverage %>
+  <%= link_to 'Edit', edit_beverage_path(beverage) %>
+  <%= link_to 'Destroy', beverage, :confirm => 'Are you sure?', :method => :delete %>
+</div>

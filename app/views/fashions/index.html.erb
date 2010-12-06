@@ -1,0 +1,20 @@
+<h1>Listing fashions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @fashions.each do |fashion| %>
+  <tr>
+    <td><%=h fashion.name %></td>
+    <td><%= link_to 'Show', fashion %></td>
+    <td><%= link_to 'Edit', edit_fashion_path(fashion) %></td>
+    <td><%= link_to 'Destroy', fashion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New fashion', new_fashion_path %>

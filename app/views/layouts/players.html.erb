@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Players: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= javascript_include_tag 'jquery_1_4_2', 'application' %>
+</head>
+<body>
+  <div id="page">
+    <div id="sidebar">
+      <ul>
+        <li><%= link_to("players", :controller => "players", :action => "index") %></li>
+        <li><%= link_to("endorsements", :controller => "endorsements", :action => "index") %></li>
+        <li><%= link_to("beverages", :controller => "beverages", :action => "new") %></li>
+        <li><%= link_to("fashions", :controller => "fashions", :action => "new") %></li>
+        <li><%= link_to("snacks", :controller => "snacks", :action => "new") %></li>
+      </ul>
+    </div>
+    <div id="content">
+  
+      <p style="color: green"><%= flash[:notice] %></p>
+
+      <%= yield %>
+    </div>
+  </div>
+
+
+</body>
+</html>

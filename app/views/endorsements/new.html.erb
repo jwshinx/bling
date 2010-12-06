@@ -1,0 +1,30 @@
+<h1>New endorsement</h1>
+
+<% form_for(@endorsement) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :player %><br />
+    <%= f.select :player, @players %>
+  </p>
+  <p>
+    <%= f.label :product %><br />
+    <%= f.select :endorseable, @products %>
+  </p>
+  <p>
+    <%= f.label :endorsement_type %><br />
+    <%= f.text_field :endorsement_type %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :cancellation_year %><br />
+    <%= f.text_field :cancellation_year %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', endorsements_path %>

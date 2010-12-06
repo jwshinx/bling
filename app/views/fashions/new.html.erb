@@ -1,0 +1,18 @@
+<h3>Fashions</h3><br />
+<div id="new-fash-form">
+  <% form_for(@fashion) do |f| %>
+    <div id="flash-div"><%= f.error_messages %></div>
+
+    <p>
+      <%= f.label :name, 'Enter new brand:' %><br />
+      <%= f.text_field :name %>
+      <%= f.submit 'Create' %>
+    </p>
+  <% end %>
+</div>
+<div id="fashions">
+  <%= render :partial => 'fashion', :collection => @fashions %>
+</div>
+<div id="fashion-count">
+  <h5 id="fashions_count"><%= pluralize(@fashions.size, 'Brand') %></h5>
+</div>

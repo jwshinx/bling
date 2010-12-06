@@ -1,0 +1,6 @@
+<div id="snac-name-div"><%=h snack.name %></div>
+<div id="new-snac-links">
+  <%= link_to 'Show', snack %>
+  <%= link_to 'Edit', edit_snack_path(snack) %>
+  <%= link_to 'Destroy', snack, :confirm => 'Are you sure?', :method => :delete %>
+</div>

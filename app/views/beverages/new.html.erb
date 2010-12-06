@@ -1,0 +1,18 @@
+<h3>Beverages</h3><br />
+<div id="new-beve-form">
+  <% form_for(@beverage) do |f| %>
+    <div id="flash-div"><%= f.error_messages %></div>
+
+    <p>
+      <%= f.label :name, 'Enter new brand:' %><br />
+      <%= f.text_field :name %>
+      <%= f.submit 'Create' %>
+    </p>
+  <% end %>
+</div>
+<div id="beverages">
+  <%= render :partial => 'beverage', :collection => @beverages %>
+</div>
+<div id="beverage-count">
+  <h5 id="beverages_count"><%= pluralize(@beverages.size, 'Brand') %></h5>
+</div>

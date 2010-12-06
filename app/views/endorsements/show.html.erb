@@ -1,0 +1,23 @@
+<p>
+  <b>Player:</b>&nbsp;<%=h @endorsement.player.firstname %>&nbsp;
+                      <%=h @endorsement.player.lastname %>
+</p>
+<p>
+  <b>Name:</b>&nbsp;<%=h @endorsement.name %>
+</p>
+<p>
+  <b>Endorsement Type:</b>&nbsp;<%=h @endorsement.endorsement_type %>
+</p>
+<p>
+  <b>Product Type:</b>&nbsp;<%=h @endorsement.endorseable.class %>
+</p>
+<p>
+  <b>Brand:</b>&nbsp;<%=h @endorsement.endorseable.name %>
+</p>
+<p>
+  <b>Year:</b>&nbsp;<%=h @endorsement.cancellation_year %>
+</p>
+
+
+<%= link_to 'Edit', edit_endorsement_path(@endorsement) %> |
+<%= link_to 'Back', endorsements_path %>

@@ -1,0 +1,3 @@
+$("#new_fashion").before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$("#fashions").append("<%= escape_javascript(render(:partial => @fashion)) %>");
+$("#new_fashion")[0].reset();
